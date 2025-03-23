@@ -1,0 +1,50 @@
+/* Contenedor general */
+.container {
+  display: flex;
+  gap: 40px;
+  padding: 20px;
+  justify-content: center;
+  background-color: white;
+  
+}
+
+/* Bloque individual */
+.grid-container {
+  justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+  background-color: #8396ff; /* Azul */
+  padding: 10px;
+  border: 3px solid black;
+  display: grid;
+  grid-template-columns: repeat(2, 170px); /* Dos columnas */
+  grid-template-rows: repeat(3, 130px); /* Tres filas */
+  gap: 20px; /* Espacio entre elementos */
+  justify-content: flex-start; /* Alinea los elementos a la izquierda */
+}
+
+/* Estilos de cada cuadro */
+.grid-item {
+  display: flex;
+  border: 4px solid black;
+  width: 120px;
+  height: 100px;
+
+}
+
+/* Colores */
+.red {
+  background-color: #e57373; /* Rojo */
+  width: 160px;
+}
+
+.orange {
+  background-color: #f4a261; /* Naranja */
+  
+}
+
+/* Organización específica de los cuadros */
+.grid-item:nth-child(1) { grid-column: 1; grid-row: 1; } /* Rojo */
+.grid-item:nth-child(2) { grid-column: 2; grid-row: 1; } /* Naranja */
+.grid-item:nth-child(3) { grid-column: 1; grid-row: 2; } /* Naranja */
+.grid-item:nth-child(4) { grid-column: 2; grid-row: 2; } /* Rojo */
+.grid-item:nth-child(5) { grid-column: 1; grid-row: 3; } /* Rojo */
+.grid-item:nth-child(6) { grid-column: 2; grid-row: 3; } /* Naranja */
